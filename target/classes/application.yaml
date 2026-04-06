@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: luis.rivas
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb+srv://luisrivas:Alexander1903@cluster0.gr4avuk.mongodb.net/ia_db?appName=Cluster0}
+      database: ia_db
+
+ai:
+  apis:
+    openai:
+      api-key: ${OPENAI_API_KEY:c7670db228msh4c0aee5e9a2ce22p14bf95jsndfd065182e43}
+      base-url: https://open-ai21.p.rapidapi.com
+      host: open-ai21.p.rapidapi.com
+      model: llama3.3-70b
+      max-tokens: 1000
+      temperature: 0.7
+
+    translate:
+      api-key: ${TRANSLATE_API_KEY:c7670db228msh4c0aee5e9a2ce22p14bf95jsndfd065182e43}
+      base-url: https://deep-translate1.p.rapidapi.com
+      host: deep-translate1.p.rapidapi.com
