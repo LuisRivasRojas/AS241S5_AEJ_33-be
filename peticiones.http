@@ -1,0 +1,27 @@
+### 1. CHAT con Llama 3.3 70b (via RapidAPI - open-ai21)
+POST http://localhost:8080/api/ia/chat
+Content-Type: application/json
+
+{
+    "prompt": "Explain what is reactive programming in one paragraph."
+}
+
+###
+
+### 2. TRADUCIR texto (Deep Translate - en -> es)
+POST http://localhost:8080/api/ia/translate?source=en&target=es
+Content-Type: application/json
+
+{
+    "prompt": "Hello World."
+}
+
+###
+
+### 3. TRADUCIR texto (Deep Translate - detección automática -> fr)
+POST http://localhost:8080/api/ia/translate?target=fr
+Content-Type: application/json
+
+{
+    "prompt": "Good morning, how are you?"
+}
