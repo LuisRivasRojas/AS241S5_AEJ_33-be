@@ -1,3 +1,7 @@
+server:
+  port: ${PORT}  # Valor por defecto si PORT no está configurado
+  url: ${SERVER_URL}  # Valor por defecto si SERVER_URL no está configurado
+  
 spring:
   application:
     name: luis.rivas

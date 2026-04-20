@@ -1,0 +1,49 @@
+# MINIKUBE FUNCIONA EN CODESPACE | LOCAL
+# KUBECTL FUNCIONA DIRECTO EN KILLERCODA (SIN MINIKUBE)
+
+# consultar versión de minikube
+minikube version
+
+# consultar si minikube esta en start o stop
+minikube status
+
+# iniciar clúster kubernetes
+minikube start
+
+# ingresar a la carpeta de los manifiestos de kubernetes (manifest)
+cd manifest
+
+# listar namespace
+kubectl get namespace
+kubectl get ns
+
+# crear un namespace "luis" por comando mediante un archivo: "luis-rivas-33-namespace.yml"
+kubectl apply -f luis-rivas-33-namespace.yml
+
+# consultar namespace en uso por "default" | LINUX
+kubectl config view --minify | grep namespace
+
+# consultar namespace en uso por "default" | WINDOWS
+kubectl config view --minify | findstr namespace
+
+# cambiar un namespace en uso por "default" a "luis-rivas-33-namespace"
+kubectl config set-context --current --namespace=luis-rivas-33-namespace
+
+# consultar todos los recursos de un namespace "luis-rivas-33-namespace"
+kubectl get all -n luis-rivas-33-namespace
+
+# consultar todos los recursos y secret de un namespace "luis-rivas-33-namespace"
+kubectl get all,secrets -n luis-rivas-33-namespace
+
+
+# listar services del namespace "luis-rivas-33-namespace"
+minikube service luis-rivas-33-service -n luis-rivas-33-namespace
+minikube service list
+
+# probar el microservicio dentro del clúster con curl
+curl http://192.168.49.2:30001/v1/api/age-detector
+curl http://192.168.49.2:30001/v1/api/age-detector/1
+
+# crear un túnel de puerto la máquina local (host) y el clúster de Kubernetes
+kubectl port-forward service/luis-rivas-33-service 8085:30001
+
