@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: luis-rivas-33-container
-        image: luisrivas3/as241-proyecto:latest   # Reemplaza con tu imagen Docker Hub
+        image: luisrivas3/as241-proyecto:1.0   # Reemplaza con tu imagen Docker Hub
         imagePullPolicy: IfNotPresent        # Evitar traer siempre la última versión si hay una actual
         ports:
-        - containerPort: 8080    # El puerto que tu app va a abrir
+        - containerPort: 8085    # El puerto que tu app va a abrir
         env:
         - name: PORT            
           value: "8080"          
