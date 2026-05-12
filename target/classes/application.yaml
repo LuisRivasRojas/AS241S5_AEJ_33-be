@@ -1,14 +1,21 @@
 server:
-  port: ${PORT}  # Valor por defecto si PORT no está configurado
-  url: ${SERVER_URL}  # Valor por defecto si SERVER_URL no está configurado
+  port: ${PORT:8080}
+  url: ${SERVER_URL:http://localhost:8080}
   
 spring:
   application:
     name: luis.rivas
   data:
     mongodb:
-      uri: ${MONGODB_URI:mongodb+srv://luisrivas:Alexander1903@cluster0.gr4avuk.mongodb.net/ia_db?appName=Cluster0}
-      database: ia_db
+      auto-index-creation: true
+
+mongodb:
+  chat:
+    uri: ${MONGODB_CHAT_URI:mongodb+srv://luisrivas:Alexander1903@cluster0.gr4avuk.mongodb.net/chat_db?appName=Cluster0}
+    database: chat_db
+  translate:
+    uri: ${MONGODB_TRANSLATE_URI:mongodb+srv://luisrivas:Alexander1903@cluster0.gr4avuk.mongodb.net/translate_db?appName=Cluster0}
+    database: translate_db
 
 ai:
   apis:
