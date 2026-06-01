@@ -39,7 +39,7 @@ jobs:
           file: ./dockerfile-luis/Dockerfile        # Dockerfile en la carpeta dockerfile-juan
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_LUIS }}/as241s5_aej_33-be-nosql:latest
-            ${{ secrets.DOCKERHUB_LUIS }}/as241s5_aej_33-be-nosql:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_LUIS }}/as241s5_aej_33-be:latest
+            ${{ secrets.DOCKERHUB_LUIS }}/as241s5_aej_33-be:${{ github.sha }}
 
 # Comentario para ejecutar el Pipeline
