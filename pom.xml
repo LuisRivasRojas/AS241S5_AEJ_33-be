@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.1</version> <!-- VERSIÓN REAL Y ESTABLE -->
+		<version>3.5.0</version>
 		<relativePath/> 
 	</parent>
 
@@ -18,6 +18,16 @@
 
 	<properties>
 		<java.version>17</java.version>
+		<!-- Forzar versiones de Netty para corregir CVEs HIGH -->
+		<netty.version>4.1.133.Final</netty.version>
+		<!-- Forzar versión de Spring Framework para corregir CVEs HIGH -->
+		<spring-framework.version>6.2.18</spring-framework.version>
+		<!-- Forzar versión de Logback para corregir CVEs MEDIUM/LOW -->
+		<logback.version>1.5.25</logback.version>
+		<!-- Forzar versión de Jackson para corregir CVEs MEDIUM -->
+		<jackson-bom.version>2.18.6</jackson-bom.version>
+		<!-- Forzar versión de Reactor Netty para corregir CVEs MEDIUM -->
+		<reactor-bom.version>2024.0.8</reactor-bom.version>
 	</properties>
 
 	<dependencies>
